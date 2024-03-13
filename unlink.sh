@@ -6,11 +6,9 @@ pushd $SCRIPT_DIR
 
 pushd home
 
-echo "Resetting current links:"
+echo "Removing current links:"
 stow -D */ -vt "$HOME"
 
-echo "Stowing home:"
-stow */ -vt "$HOME" 
 
 popd
 popd
