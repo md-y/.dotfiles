@@ -1,5 +1,9 @@
 export XDG_CONFIG_HOME="$HOME/.config/"
 
+if [ -x "$(command -v wslview)" ]; then
+	export BROWSER=wslview
+fi
+
 ## DEFAULT DEBAIN BASH:
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
