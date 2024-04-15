@@ -1,0 +1,3 @@
+# Ignore non-nvim configs
+home/nvim/.config/*
+!home/nvim/.config/nvim
