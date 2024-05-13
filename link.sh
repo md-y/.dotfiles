@@ -9,6 +9,9 @@ pushd home
 echo "Resetting current links:"
 stow -D */ -vt "$HOME"
 
+echo "Delete .bashrc"
+rm "$HOME/.bashrc"
+
 echo "Stowing home:"
 stow */ -vt "$HOME" 
 
