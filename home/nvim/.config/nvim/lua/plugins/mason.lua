@@ -24,10 +24,11 @@ return {
       "stylua",
       "tailwindcss-language-server",
       "taplo",
-      "typescript-language-server",
+      "js-debug-adapter",
       "vue-language-server",
       "svelte-language-server",
       "css-lsp",
+      "vtsls",
     },
   },
 }
