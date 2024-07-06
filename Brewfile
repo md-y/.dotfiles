@@ -16,6 +16,7 @@ brew 'netcat'
 brew 'gnupg'
 brew 'prettier'
 brew 'prettierd'
+brew 'pnpm'
 
 # Languages
 brew 'python'
