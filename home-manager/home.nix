@@ -2,14 +2,17 @@
 
 {
   home = {
+    stateVersion = "24.05";
     username = "sam";
     homeDirectory = "/home/sam";
   };
 
+  systemd.user.startServices = "sd-switch";
+
   programs.home-manager.enable = true;
-  programs.git.enable = true;
-  programs.bash.enable = true;
+
   programs.git = {
+    enable = true;
     userName = "md-y";
     userEmail = "15069105+md-y@users.noreply.github.com";
     extraConfig = {
@@ -20,7 +23,20 @@
     };
   };
 
-  systemd.user.startServices = "sd-switch";
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+    shellAliases = {
+      update = "sudo nixos-rebuild switch --flake ~/dotfiles/";
+    };
+  };
 
-  home.stateVersion = "24.05";
+  programs.zoxide = {
+    enable = true;
+    options = [
+      "--cmd cd"
+    ];
+  };
 }

@@ -3,46 +3,28 @@
 {
   imports = [
     inputs.home-manager.nixosModules.home-manager
+    ./packages.nix
   ];
 
-  networking.hostName = "nixos";
+  # General Settings
   system.stateVersion = "24.05";
-
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-    };
-  };
-
+  networking.hostName = "nixos";
   nix.settings = {
     experimental-features = "nix-command flakes";
     nix-path = config.nix.nixPath;
   };
 
+  # WSL Settings
   wsl.enable = true;
   wsl.defaultUser = "sam";
-
-  # Packages
-  environment.systemPackages = with pkgs; [
-    gh
-    git
-    neovim
-    curl
-    wslu
-    git-credential-oauth
-  ];
-
-  # Global Settings
-  programs = {
-    git = {
-      enable = true;
-      config = {
-        init.defaultBranch = "main";
-      };
-    };
+  programs.nix-ld = {
+    enable = true;
+    # Setup package for VS Code Remote: https://nix-community.github.io/NixOS-WSL/how-to/vscode.html
+    package = pkgs.nix-ld-rs;
   };
 
-  # User Settings
+  # Init Home Manager
+  users.defaultUserShell = pkgs.zsh;
   home-manager.useGlobalPkgs = true;
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
