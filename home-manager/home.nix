@@ -1,5 +1,3 @@
-# This is your home-manager configuration file
-# Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
 { inputs, lib,config, pkgs, ... }:
 
 {
@@ -10,18 +8,15 @@
 
   programs.home-manager.enable = true;
   programs.git.enable = true;
-
-  # User Settings
-  home-manager.useGlobalPkgs = true;
-  home-manager.users.sam = { pkgs, ... }: {
-    programs.bash.enable = true;
-    home.stateVersion = "24.05";
-    programs.git = {
-      userName = "md-y";
-      userEmail = "15069105+md-y@users.noreply.github.com";
-      extraConfig = {
-        credentia.helper = "oauth";
-      };
+  programs.bash.enable = true;
+  programs.git = {
+    userName = "md-y";
+    userEmail = "15069105+md-y@users.noreply.github.com";
+    extraConfig = {
+      credential.helper = [
+        "store --file ~/.git-credentials"
+        "oauth"
+      ];
     };
   };
 
