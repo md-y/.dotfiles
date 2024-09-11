@@ -26,6 +26,9 @@
     # python # Don't install python directly: https://wiki.nixos.org/wiki/Python
     jdk21_headless
     go
+
+    # Language Tools
+    nodePackages.pnpm
   ];
 
   programs.git = {
