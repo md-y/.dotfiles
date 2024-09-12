@@ -1,38 +1,21 @@
-# Dotfiles
+# .dotfiles
 
-These are my personal dotfiles, primarily designed to work on Debian through WSL2.
+These are my personal dotfiles for NixOS running on WSL2.
 
-## Setup
+## Setting Up
 
-The initial packages should be installed with the command:
-
+1. Follow the NixOS WSL2 [instructions](https://github.com/nix-community/NixOS-WSL).
+2. Follow the [instructions](https://nix-community.github.io/NixOS-WSL/how-to/change-username.html) to change the username to `sam`.
+3. Temporarily install `git`:
 ```bash
-sudo apt-get install -y git curl gcc build-essential procps file man
+nix-shell -p git
 ```
-
-Further packages are managed by [homebrew](https://brew.sh/), so it should be installed according to the documentation.
-
-Afterwards, run within this directory:
-
+4. Clone this repository to `~/.dotfiles`:
 ```bash
-brew tap Homebrew/bundle
-brew bundle
+git clone https://github.com/md-y/.dotfiles ~/.dotfiles
 ```
-
-The `home` directory is linked using GNU Stow using `link.sh`. Run this script after all packages have been installed.
-
-The `etc` directory is not linked, and can be copied anytime with `copy-etc.sh`.
-
-## Manual Setup
-
-[wslu](https://wslutiliti.es/wslu/install.html) needs to be installed manually.
-
-Git needs to be authenticated, which can easily be done through `gh`:
-
+5. Rebuild the system:
 ```bash
-gh auth login -w
+sudo nixos-rebuild switch --flake ~/.dotfiles
 ```
-
-## Troubleshooting
-
-Sometimes, Mason will fail to install the default packages, so each must be manually updated (using `u`).
+6. Restart WSL2

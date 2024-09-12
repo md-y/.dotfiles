@@ -1,5 +1,0 @@
-Brewfile.lock.json
-
-# Ignore non-nvim configs
-home/nvim/.config/*
-!home/nvim/.config/nvim
