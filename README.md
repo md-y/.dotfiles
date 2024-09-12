@@ -10,8 +10,12 @@ These are my personal dotfiles for NixOS running on WSL2.
 ```bash
 nix-shell -p git
 ```
-4. Rebuild the system:
+4. Clone this repository to `~/.dotfiles`:
+```bash
+git clone https://github.com/md-y/.dotfiles ~/.dotfiles
+```
+5. Rebuild the system:
 ```bash
 sudo nixos-rebuild switch --flake ~/.dotfiles
 ```
-5. Restart WSL2
+6. Restart WSL2
