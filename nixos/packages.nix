@@ -1,10 +1,18 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   nixpkgs = {
     config = {
       allowUnfree = true;
     };
+    overlays = [
+      (final: _prev: {
+        unstable = import inputs.nixpkgs-unstable {
+          system = final.system;
+          config.allowUnfree = true;
+        };
+      })
+    ];
   };
 
   environment.systemPackages = with pkgs; [
@@ -29,6 +37,14 @@
 
     # Language Tools
     nodePackages.pnpm
+    moon
+    unstable.buf
+
+    # Protobuf
+    protobuf
+    grpcurl
+    protoc-gen-go
+    protoc-gen-connect-go
   ];
 
   programs.git = {
