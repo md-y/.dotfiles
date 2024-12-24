@@ -31,7 +31,6 @@
 
     # Languages
     nodejs
-    # python # Don't install python directly: https://wiki.nixos.org/wiki/Python
     jdk21_headless
     go
 
@@ -39,6 +38,7 @@
     nodePackages.pnpm
     moon
     unstable.buf
+    unstable.uv
 
     # Protobuf
     protobuf
@@ -57,4 +57,6 @@
   programs.zsh = {
     enable = true;
   };
+
+  services.ollama.enable = true;
 }
