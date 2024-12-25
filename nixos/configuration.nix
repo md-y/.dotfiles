@@ -32,4 +32,6 @@
       sam = import ../home-manager/home.nix;
     };
   };
+
+  environment.variables = import ./env.nix;
 }
