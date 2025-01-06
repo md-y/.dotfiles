@@ -28,6 +28,7 @@
     tree
     zoxide
     xclip
+    sqlite
 
     # Languages
     nodejs
