@@ -29,6 +29,11 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     shellAliases = import ./aliases.nix;
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ "git" "virtualenv" ];
+      theme = "kennethreitz";
+    };
   };
 
   programs.zoxide = {

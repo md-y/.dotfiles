@@ -1,5 +1,5 @@
 {
   nrs = "sudo nixos-rebuild switch --flake ~/.dotfiles/";
   dfe = "sudo nvim ~/.dotfiles/";
-  nx = "npx nx";
+  pya = "nix-shell --command \"$SHELL\" ~/.dotfiles/shells/python.nix";
 }

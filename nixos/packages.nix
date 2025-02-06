@@ -39,7 +39,6 @@
     nodePackages.pnpm
     moon
     unstable.buf
-    unstable.uv
     gcc
 
     # Protobuf
