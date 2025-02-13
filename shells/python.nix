@@ -1,10 +1,20 @@
 { pkgs ? import <nixpkgs> {} }:
 
-pkgs.mkShell {
-  buildInputs = with pkgs.python3Packages; [ 
-    pkgs.python3
+let
+  buildInputs = [ 
+    pkgs.python312Full
+    pkgs.python312Packages.tkinter
+    pkgs.glib
+    pkgs.zlib
+    pkgs.libGL
+    pkgs.fontconfig
+    pkgs.xorg.libX11
+    pkgs.libxkbcommon
+    pkgs.freetype
+    pkgs.dbus
   ];
-
+in pkgs.mkShell {
+  inherit buildInputs;
   shellHook = ''
     if [ ! -d ".venv" ]; then
       echo "No virtual environment found. Creating one..."
@@ -12,6 +22,7 @@ pkgs.mkShell {
     fi
 
     export LD_LIBRARY_PATH=${pkgs.stdenv.cc.cc.lib}/lib:$LD_LIBRARY_PATH
+    export LD_LIBRARY_PATH="${pkgs.lib.makeLibraryPath buildInputs}:$LD_LIBRARY_PATH"
 
     source .venv/bin/activate
     echo "Virtual environment activated!"
