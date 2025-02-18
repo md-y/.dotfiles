@@ -21,7 +21,6 @@ in pkgs.mkShell {
       python -m venv .venv
     fi
 
-    export LD_LIBRARY_PATH=${pkgs.stdenv.cc.cc.lib}/lib:$LD_LIBRARY_PATH
     export LD_LIBRARY_PATH="${pkgs.lib.makeLibraryPath buildInputs}:$LD_LIBRARY_PATH"
 
     source .venv/bin/activate

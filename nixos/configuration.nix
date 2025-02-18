@@ -4,6 +4,7 @@
   imports = [
     inputs.home-manager.nixosModules.home-manager
     ./packages.nix
+    ./env.nix
   ];
 
   # General Settings
@@ -32,6 +33,4 @@
       sam = import ../home-manager/home.nix;
     };
   };
-
-  environment.variables = import ./env.nix;
 }
