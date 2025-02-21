@@ -25,5 +25,10 @@ in pkgs.mkShell {
 
     source .venv/bin/activate
     echo "Virtual environment activated!"
+
+    if [ -f "requirements.txt" ]; then
+      pip install -r requirements.txt | grep -v 'already satisfied'
+      echo "Installed requirements."
+    fi
   '';
 }
