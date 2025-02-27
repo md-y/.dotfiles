@@ -1,9 +1,12 @@
 { pkgs ? import <nixpkgs> {} }:
 
 pkgs.mkShell {
-  buildInputs = [ 
-    pkgs.gcc
-    pkgs.musl
-    pkgs.gnumake
+  name = "cca";
+  buildInputs = with pkgs; [ 
+    gcc
+    glibc.out
+    glibc.static
+    gnumake
+    gdb
   ];
 }

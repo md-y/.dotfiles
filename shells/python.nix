@@ -15,6 +15,7 @@ let
   ];
 in
 pkgs.mkShell {
+  name = "pya";
   inherit buildInputs;
   shellHook = ''
     if [ ! -d ".venv" ]; then

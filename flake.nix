@@ -16,10 +16,10 @@
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-	specialArgs = {inherit inputs outputs;};
+	      specialArgs = {inherit inputs outputs;};
         modules = [
           nixos-wsl.nixosModules.default
-	  ./nixos/configuration.nix
+	        ./nixos/configuration.nix
         ];
       };
     };

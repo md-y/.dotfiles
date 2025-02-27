@@ -16,10 +16,12 @@
   };
 
   environment.systemPackages = with pkgs; [
-    # CLI Tools
+    # Git Tools
     gh
     git
     git-credential-oauth
+
+    # CLI Tools
     neovim
     curl
     wslu
@@ -28,24 +30,6 @@
     tree
     zoxide
     xclip
-    sqlite
-
-    # Languages
-    nodejs
-    jdk21_headless
-    go
-
-    # Language Tools
-    nodePackages.pnpm
-    moon
-    unstable.buf
-    gcc
-
-    # Protobuf
-    protobuf
-    grpcurl
-    protoc-gen-go
-    protoc-gen-connect-go
   ];
 
   programs.git = {

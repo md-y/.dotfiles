@@ -32,7 +32,8 @@
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" "virtualenv" ];
-      theme = "kennethreitz";
+      custom = "$HOME/.dotfiles/zsh";
+      theme = "mdy";
     };
   };
 
