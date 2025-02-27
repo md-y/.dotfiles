@@ -13,7 +13,8 @@ let
     pkgs.freetype
     pkgs.dbus
   ];
-in pkgs.mkShell {
+in
+pkgs.mkShell {
   inherit buildInputs;
   shellHook = ''
     if [ ! -d ".venv" ]; then
