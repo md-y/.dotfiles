@@ -6,5 +6,6 @@
     LD_LIBRARY_PATH = lib.makeLibraryPath [
       pkgs.stdenv.cc.cc
     ];
+    IDE="code";
   };
 }

@@ -30,6 +30,7 @@
     tree
     zoxide
     xclip
+    gcc
   ];
 
   programs.git = {
