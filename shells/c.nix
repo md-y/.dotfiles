@@ -8,5 +8,6 @@ pkgs.mkShell {
     glibc.static
     gnumake
     gdb
+    emscripten
   ];
 }

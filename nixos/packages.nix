@@ -31,6 +31,9 @@
     zoxide
     xclip
     gcc
+
+    # General Packages
+    nodejs
   ];
 
   programs.git = {
