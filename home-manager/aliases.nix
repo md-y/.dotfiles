@@ -2,6 +2,7 @@
   nrs = "sudo nixos-rebuild switch --flake ~/.dotfiles/";
   dfe = "ide ~/.dotfiles/";
   dfo = "cd ~/.dotfiles/";
-  pya = "nix-shell --command \"$SHELL\" ~/.dotfiles/shells/python.nix";
-  cca = "nix-shell --command \"$SHELL\" ~/.dotfiles/shells/c.nix";
+  pya = "nix develop ~/.dotfiles/#python --command \"$SHELL\"";
+  cca = "nix develop ~/.dotfiles/#c --command \"$SHELL\"";
+  jsa = "nix develop ~/.dotfiles/#js --command \"$SHELL\"";
 }
