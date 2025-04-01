@@ -19,3 +19,8 @@ git clone https://github.com/md-y/.dotfiles ~/.dotfiles
 sudo nixos-rebuild switch --flake ~/.dotfiles
 ```
 6. Restart WSL2
+
+Occasionally, run:
+```bash
+nix flake update
+```

@@ -1,7 +1,7 @@
-{ pkgs ? import <nixpkgs> {} }:
+{ pkgs }:
 
 let
-  buildInputs = [ 
+  packages = [ 
     pkgs.python312Full
     pkgs.python312Packages.tkinter
     pkgs.glib
@@ -16,14 +16,14 @@ let
 in
 pkgs.mkShell {
   name = "pya";
-  inherit buildInputs;
+  inherit packages;
   shellHook = ''
     if [ ! -d ".venv" ]; then
       echo "No virtual environment found. Creating one..."
       python -m venv .venv
     fi
 
-    export LD_LIBRARY_PATH="${pkgs.lib.makeLibraryPath buildInputs}:$LD_LIBRARY_PATH"
+    export LD_LIBRARY_PATH="${pkgs.lib.makeLibraryPath packages}:$LD_LIBRARY_PATH"
 
     source .venv/bin/activate
     echo "Virtual environment activated!"

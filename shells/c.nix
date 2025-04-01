@@ -1,8 +1,8 @@
-{ pkgs ? import <nixpkgs> {} }:
+{ pkgs }:
 
 pkgs.mkShell {
   name = "cca";
-  buildInputs = with pkgs; [ 
+  packages = with pkgs; [ 
     gcc
     glibc.out
     glibc.static

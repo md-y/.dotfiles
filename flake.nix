@@ -9,9 +9,16 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, nixos-wsl, home-manager, ... } @ inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, nixos-wsl, home-manager, ... } @ inputs:
   let 
     inherit (self) outputs;
+    system = "x86_64-linux";
+    pkgs = import nixpkgs {
+      inherit system;
+    };
+    unstable = import nixpkgs-unstable {
+      inherit system;
+    };
   in {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
@@ -23,5 +30,7 @@
         ];
       };
     };
+
+    devShells.${system} = import ./shells/shells.nix { inherit pkgs unstable; };
   };
 }
