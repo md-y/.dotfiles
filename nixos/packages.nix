@@ -47,5 +47,11 @@
     enable = true;
   };
 
-  services.ollama.enable = true;
+    services.ollama = {
+    enable = true;
+    package = pkgs.unstable.ollama;
+    environmentVariables = {
+      OLLAMA_ORIGINS = "*";
+    };
+  };
 }
