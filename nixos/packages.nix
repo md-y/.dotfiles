@@ -31,6 +31,7 @@
     zoxide
     xclip
     gcc
+    tmux
 
     # General Packages
     nodejs
