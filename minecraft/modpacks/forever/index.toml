@@ -1,0 +1,36 @@
+hash-format = "sha256"
+
+[[files]]
+file = "mods/c2me-fabric.pw.toml"
+hash = "daefcde9f34942b22f4612b1c1728b45602b25236bde9be6ef18cb6ebb044c34"
+metafile = true
+
+[[files]]
+file = "mods/carpet.pw.toml"
+hash = "b341ba6158b0e2168a4d09ed6a733b976ab13667125907e595921fd77dfe73d3"
+metafile = true
+
+[[files]]
+file = "mods/distanthorizons.pw.toml"
+hash = "9366e9ff9a46c5302ca2a6574ef1f7cf0e56f0fca2bd25c6f2ef147929eb3fe3"
+metafile = true
+
+[[files]]
+file = "mods/fabric-api.pw.toml"
+hash = "177d0f93f7d581006588f9aedbeaccef7978fff254ddc27a2ffc064966999e02"
+metafile = true
+
+[[files]]
+file = "mods/ferrite-core.pw.toml"
+hash = "f1da925ae791df99a453d1e135cb3c7a390c861a6ae9db299e19ffc83dfed680"
+metafile = true
+
+[[files]]
+file = "mods/lithium.pw.toml"
+hash = "1ade7d5507020f8fdc26d724600c1fa4fc78ca9aa1cde13293292216ae611e9c"
+metafile = true
+
+[[files]]
+file = "mods/noisium.pw.toml"
+hash = "7661d1a82fd3a834c08faec906ba92abbfaa140a84ab19a27aad107dfcc6da85"
+metafile = true

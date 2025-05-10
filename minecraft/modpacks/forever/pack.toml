@@ -1,0 +1,12 @@
+name = "forever-server"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "3f801d3e95df2cb332e047e7ca12b814fbfdbd01b49a22609b24a9770b76787e"
+
+[versions]
+fabric = "0.16.14"
+minecraft = "1.21.5"

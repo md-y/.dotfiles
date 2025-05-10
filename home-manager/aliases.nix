@@ -1,5 +1,5 @@
 {
-  nrs = "sudo nixos-rebuild switch --flake ~/.dotfiles/";
+  nrs = "sudo nixos-rebuild switch --flake ~/.dotfiles/#$HOST";
   dfe = "ide ~/.dotfiles/";
   dfo = "cd ~/.dotfiles/";
   pya = "nix develop ~/.dotfiles/#python --command \"$SHELL\"";
