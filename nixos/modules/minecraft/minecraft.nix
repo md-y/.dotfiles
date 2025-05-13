@@ -2,7 +2,7 @@
 
 let
   defaultModpack = pkgs.fetchPackwizModpack {
-    url = "https://raw.githubusercontent.com/md-y/.dotfiles/refs/heads/master/minecraft/modpacks/default/pack.toml";
+    url = "https://raw.githubusercontent.com/md-y/.dotfiles/refs/heads/master/nixos/modules/minecraft/modpacks/default/index.toml";
     packHash = "sha256-daRAKyoALeHF+vd7Y2Mzb7sog7EyZoIwaYwR9KKolgU=";
   };
 in
