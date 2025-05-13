@@ -40,11 +40,11 @@
         modules = [
           ./nixos/configuration.nix
           ./nixos/wsl.nix
-          ./minecraft/minecraft.nix
+          ./nixos/modules/minecraft/minecraft.nix
         ];
       };
     };
 
-    devShells.${system} = import ./shells/shells.nix { inherit pkgs unstable; };
+    devShells.${system} = import ./nixos/shells/shells.nix { inherit pkgs unstable; };
   };
 }
