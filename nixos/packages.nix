@@ -48,7 +48,7 @@
     enable = true;
   };
 
-    services.ollama = {
+  services.ollama = {
     enable = true;
     package = pkgs.unstable.ollama;
     environmentVariables = {

@@ -34,3 +34,8 @@ metafile = true
 file = "mods/noisium.pw.toml"
 hash = "7661d1a82fd3a834c08faec906ba92abbfaa140a84ab19a27aad107dfcc6da85"
 metafile = true
+
+[[files]]
+file = "mods/servux.pw.toml"
+hash = "e33f8763209ab1f14919faeb2bc4581358f0d30c515763cc80184e73c4d9d14b"
+metafile = true
