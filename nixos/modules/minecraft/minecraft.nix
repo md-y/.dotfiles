@@ -2,8 +2,8 @@
 
 let
   defaultModpack = pkgs.fetchPackwizModpack {
-    url = "https://raw.githubusercontent.com/md-y/.dotfiles/refs/heads/master/nixos/modules/minecraft/modpacks/default/index.toml";
-    packHash = "sha256-daRAKyoALeHF+vd7Y2Mzb7sog7EyZoIwaYwR9KKolgU=";
+    url = "https://raw.githubusercontent.com/md-y/.dotfiles/5ed51c250a71965adf62e4492b4081107ae11a3c/nixos/modules/minecraft/modpacks/default/pack.toml";
+    packHash = "sha256-xnSsGDRpf5KJcbv5JXdWxuap6LppeEwmJiFBxUsl6p0=";
   };
 
   lazymcConfig = cfg: pkgs.writeTextFile {
@@ -37,6 +37,14 @@ let
       hash = "sha256-uMjM3w78qWnB/sNXRcxl30KJRm0I3BPEOr5IRU8FI0s=";
     };
   });
+
+  lazymcServer = pkgs.writeShellApplication {
+    name = "start-lazymc";
+    runtimeInputs = [ newLazymc ];
+    text = ''
+      lazymc
+    '';
+  };
 in
 {
   imports = [ inputs.nix-minecraft.nixosModules.minecraft-servers ];
@@ -50,15 +58,8 @@ in
 
   services.minecraft-servers.servers.default = {
     enable = true;
-    autoStart = false;
     restart = "no";
-    package = pkgs.writeShellApplication {
-      name = "start-lazymc";
-      runtimeInputs = [ newLazymc ];
-      text = ''
-        lazymc
-      '';
-    };
+    package = lazymcServer;
     symlinks = {
       "mods" = "${defaultModpack}/mods";
       "lazymc.toml" = lazymcConfig {
@@ -71,7 +72,10 @@ in
     };
     serverProperties = {
       motd = "Sam's Minecraft Server";
-      server-port = 25566;
+      white-list = true;
+      enforce-whitelist = true;
+      difficulty = "hard";
+      level-seed = 3368699220760197849;
     };
   };
 
