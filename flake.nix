@@ -44,6 +44,17 @@
           ./nixos/modules/minecraft/minecraft.nix
         ];
       };
+      laptop = nixpkgs.lib.nixosSystem {
+        inherit system;
+	      specialArgs = {
+          inherit inputs outputs;
+          configName = "laptop";
+        };
+        modules = [
+          ./nixos/configuration.nix
+          ./nixos/modules/wsl.nix
+        ];
+      };
     };
 
     devShells.${system} = import ./nixos/shells/shells.nix { inherit pkgs unstable; };
