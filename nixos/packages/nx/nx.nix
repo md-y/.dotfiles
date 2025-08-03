@@ -1,9 +1,9 @@
 { pkgs ? import <nixpkgs> {} }:
 
 let
-  version = "21.3.11";
-  hash = "sha256-qALzmHvESXcNLtn1kekmOK643j/d8Q+jcLf7rPt+Y2o=";
-  npmDepsHash = "sha256-KeuSYm5xcSK34+zNO1wDZKMjH9bk7pEwisgxXcPJhYA=";
+  version = "21.4.0-beta.5";
+  hash = "sha256-KEkx2UmAXYckGFltwJC4z4AsNyCvrF8dLF+KlqOiVy0=";
+  npmDepsHash = "sha256-gb7R+cNjYmDiEBaniXVwu6wJTvGz96Y3WZOc/njymuU=";
 in
 pkgs.buildNpmPackage {
   pname = "nx";
