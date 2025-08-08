@@ -8,6 +8,8 @@ pkgs.mkShell {
   packages = [ 
     pkgs.nodejs
     unstable.bun
+    unstable.pnpm
+    unstable.yarn
     nx
   ];
 }
