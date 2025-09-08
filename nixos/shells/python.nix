@@ -12,6 +12,7 @@ let
     pkgs.libxkbcommon
     pkgs.freetype
     pkgs.dbus
+    pkgs.stdenv.cc.cc
   ];
 in
 pkgs.mkShell {
