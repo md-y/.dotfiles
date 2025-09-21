@@ -4,6 +4,7 @@ let
   packages = [ 
     pkgs.python312Full
     pkgs.python312Packages.tkinter
+    pkgs.python312Packages.pygraphviz
     pkgs.glib
     pkgs.zlib
     pkgs.libGL
@@ -13,6 +14,8 @@ let
     pkgs.freetype
     pkgs.dbus
     pkgs.stdenv.cc.cc
+    pkgs.graphviz
+    pkgs.pkg-config
   ];
 in
 pkgs.mkShell {
