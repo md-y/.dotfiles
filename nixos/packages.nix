@@ -32,6 +32,7 @@
     xclip
     gcc
     tmux
+    zip
 
     # General Packages
     nodejs
