@@ -2,22 +2,22 @@ hash-format = "sha256"
 
 [[files]]
 file = "mods/c2me-fabric.pw.toml"
-hash = "daefcde9f34942b22f4612b1c1728b45602b25236bde9be6ef18cb6ebb044c34"
+hash = "8086b5e5e4f3d502f953835601d6ff3c6556a1d6d33471d8a427629994b1f4c8"
 metafile = true
 
 [[files]]
 file = "mods/carpet.pw.toml"
-hash = "b341ba6158b0e2168a4d09ed6a733b976ab13667125907e595921fd77dfe73d3"
+hash = "11f67e0dbc3bd85dafbdf65b57a5bb7dbcbce24267d63c7a4ba69331d8be83c4"
 metafile = true
 
 [[files]]
 file = "mods/distanthorizons.pw.toml"
-hash = "9366e9ff9a46c5302ca2a6574ef1f7cf0e56f0fca2bd25c6f2ef147929eb3fe3"
+hash = "b4aa0bb192616e4bc2b43c2f001c6f5d16d49af992c2a6293994ce6e334c6666"
 metafile = true
 
 [[files]]
 file = "mods/fabric-api.pw.toml"
-hash = "848b460340606f588fb4cb20301b3369cc9db3a10e29a1083a079634eeb39be9"
+hash = "33ef54b98586efebf9f3afbbdb4789e9b384940a3c60b43c3cd7a3a05363b66f"
 metafile = true
 
 [[files]]
@@ -27,15 +27,10 @@ metafile = true
 
 [[files]]
 file = "mods/lithium.pw.toml"
-hash = "1ade7d5507020f8fdc26d724600c1fa4fc78ca9aa1cde13293292216ae611e9c"
-metafile = true
-
-[[files]]
-file = "mods/noisium.pw.toml"
-hash = "7661d1a82fd3a834c08faec906ba92abbfaa140a84ab19a27aad107dfcc6da85"
+hash = "f3d82bb956990502bbfc59aa894e4942709f41b0c971a36b2762d68340185668"
 metafile = true
 
 [[files]]
 file = "mods/servux.pw.toml"
-hash = "e33f8763209ab1f14919faeb2bc4581358f0d30c515763cc80184e73c4d9d14b"
+hash = "6e0c273c2745eec6c41140a2b0f2e68e9f67886e187410728c31fa1b56decd48"
 metafile = true
