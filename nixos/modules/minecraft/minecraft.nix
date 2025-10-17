@@ -2,8 +2,8 @@
 
 let
   defaultModpack = pkgs.fetchPackwizModpack {
-    url = "https://raw.githubusercontent.com/md-y/.dotfiles/5ed51c250a71965adf62e4492b4081107ae11a3c/nixos/modules/minecraft/modpacks/default/pack.toml";
-    packHash = "sha256-xnSsGDRpf5KJcbv5JXdWxuap6LppeEwmJiFBxUsl6p0=";
+    url = "https://raw.githubusercontent.com/md-y/.dotfiles/3124b4d198b69bed2c17ceb9e3b72d1ee5537d43/nixos/modules/minecraft/modpacks/default/pack.toml";
+    packHash = "sha256-sVJmWFgATWkX805Wkq3j2R28LR9y6JJwOzRPckyZRBA=";
   };
 
   lazymcConfig = cfg: pkgs.writeTextFile {
@@ -64,9 +64,9 @@ in
       "mods" = "${defaultModpack}/mods";
       "lazymc.toml" = lazymcConfig {
         dataDir = "/srv/minecraft/default";
-        mcVersion = "1.20.5";
+        mcVersion = "1.20.10";
         protocolVersion = 770;
-        package = pkgs.fabricServers.fabric-1_21_5;
+        package = pkgs.fabricServers.fabric-1_21_10;
         jvmOpts = "-Xmx2G -Xms1G";
       };
     };
