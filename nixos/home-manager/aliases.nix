@@ -5,4 +5,5 @@
   pya = "nix develop ~/.dotfiles/#python --command \"$SHELL\"";
   cca = "nix develop ~/.dotfiles/#c --command \"$SHELL\"";
   jsa = "nix develop ~/.dotfiles/#js --command \"$SHELL\"";
+  jva = "nix develop ~/.dotfiles/#java --command \"$SHELL\"";
 }
