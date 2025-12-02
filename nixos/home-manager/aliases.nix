@@ -6,4 +6,5 @@
   cca = "nix develop ~/.dotfiles/#c --command \"$SHELL\"";
   jsa = "nix develop ~/.dotfiles/#js --command \"$SHELL\"";
   jva = "nix develop ~/.dotfiles/#java --command \"$SHELL\"";
+  pma = "nix develop ~/.dotfiles/#php --command \"$SHELL\"";
 }

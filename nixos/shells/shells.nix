@@ -5,4 +5,5 @@
   c = import ./c.nix { inherit pkgs; };
   js = import ./js.nix { inherit pkgs unstable; };
   java = import ./java.nix { inherit pkgs unstable; };
+  php = import ./php.nix { inherit pkgs; };
 }
