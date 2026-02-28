@@ -5,14 +5,7 @@
     config = {
       allowUnfree = true;
     };
-    overlays = [
-      (final: _prev: {
-        unstable = import inputs.nixpkgs-unstable {
-          system = final.system;
-          config.allowUnfree = true;
-        };
-      })
-    ];
+    overlays = import ./overlays.nix { inherit inputs; };
   };
 
   environment.systemPackages = with pkgs; [

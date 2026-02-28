@@ -1,4 +1,4 @@
-{ pkgs, unstable }:
+{ pkgs }:
 
 let
   nx = import ../packages/nx/nx.nix { inherit pkgs; };
@@ -7,9 +7,9 @@ pkgs.mkShell {
   name = "jsa";
   packages = [ 
     pkgs.nodejs
-    unstable.bun
-    unstable.pnpm
-    unstable.yarn
+    pkgs.unstable.bun
+    pkgs.unstable.pnpm
+    pkgs.unstable.yarn
     nx
   ];
 }

@@ -1,9 +1,9 @@
-{ pkgs, unstable }:
+{ pkgs }:
 
 {
   python = import ./python.nix { inherit pkgs; };
   c = import ./c.nix { inherit pkgs; };
-  js = import ./js.nix { inherit pkgs unstable; };
-  java = import ./java.nix { inherit pkgs unstable; };
-  php = import ./php.nix { inherit pkgs; };
+  js = import ./js.nix { inherit pkgs; };
+  java = import ./java.nix { inherit pkgs; };
+  rust = import ./rust.nix { inherit pkgs; };
 }

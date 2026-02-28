@@ -4,9 +4,13 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/release-24.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
     flake-compat.url = "github:edolstra/flake-compat";
+
+    rust-overlay.url = "github:oxalica/rust-overlay";
 
     #### For Modules
 
@@ -23,11 +27,11 @@
   let 
     inherit (self) outputs;
     system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
+    overlays = import ./nixos/overlays.nix {
+      inherit inputs;
     };
-    unstable = import nixpkgs-unstable {
-      inherit system;
+    pkgs = import nixpkgs {
+      inherit system overlays;
     };
   in {
     nixosConfigurations = {
@@ -57,6 +61,6 @@
       };
     };
 
-    devShells.${system} = import ./nixos/shells/shells.nix { inherit pkgs unstable; };
+    devShells.${system} = import ./nixos/shells/shells.nix { inherit pkgs; };
   };
 }
