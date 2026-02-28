@@ -1,8 +1,16 @@
 { pkgs }:
 
+let
+  rust = pkgs.rust-bin.stable.latest.default.override {
+    extensions = [
+      "rust-src"
+      "rust-analyzer"
+    ];
+  };
+in
 pkgs.mkShell {
   name = "rsa";
   buildInputs = [
-    pkgs.rust-bin.beta.latest.default
+    rust
   ];
 }
