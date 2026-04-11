@@ -22,6 +22,8 @@ pkgs.mkShell {
   name = "pya";
   inherit packages;
   shellHook = ''
+    export CUDA_PATH=${pkgs.cudatoolkit}
+
     if [ ! -d ".venv" ]; then
       echo "No virtual environment found. Creating one..."
       python -m venv .venv

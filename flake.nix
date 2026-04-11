@@ -31,6 +31,9 @@
       inherit inputs;
     };
     pkgs = import nixpkgs {
+      config = {
+        allowUnfree = true;
+      };
       inherit system overlays;
     };
   in {
@@ -57,6 +60,7 @@
         modules = [
           ./nixos/configuration.nix
           ./nixos/modules/wsl.nix
+          ./nixos/modules/nvidia.nix
         ];
       };
     };
