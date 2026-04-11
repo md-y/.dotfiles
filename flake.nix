@@ -49,6 +49,7 @@
           ./nixos/modules/wsl.nix
           ./nixos/modules/rathole/client.nix
           ./nixos/modules/minecraft/minecraft.nix
+          ./nixos/modules/nvidia.nix
         ];
       };
       laptop = nixpkgs.lib.nixosSystem {
@@ -60,7 +61,6 @@
         modules = [
           ./nixos/configuration.nix
           ./nixos/modules/wsl.nix
-          ./nixos/modules/nvidia.nix
         ];
       };
     };
