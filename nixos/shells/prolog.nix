@@ -8,6 +8,7 @@ pkgs.mkShell {
   ];
   shellHook = ''
     export CIAOPATH="$PWD/.ciao"
+    export PATH="$CIAOPATH/build/bin:$PATH"
     mkdir -p .ciao
     echo "Ciao workspace set to $CIAOPATH"
   '';
