@@ -7,4 +7,5 @@
   jsa = "nix develop ~/.dotfiles/#js --command \"$SHELL\"";
   jva = "nix develop ~/.dotfiles/#java --command \"$SHELL\"";
   rsa = "nix develop ~/.dotfiles/#rust --command \"$SHELL\"";
+  pla = "nix develop ~/.dotfiles/#prolog --command \"$SHELL\"";
 }
