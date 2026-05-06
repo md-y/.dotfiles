@@ -1,7 +1,7 @@
 { pkgs, inputs, config, ... }:
 
 {
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
   };
 

@@ -2,8 +2,8 @@
 
 let
   defaultModpack = pkgs.fetchPackwizModpack {
-    url = "https://raw.githubusercontent.com/md-y/.dotfiles/3124b4d198b69bed2c17ceb9e3b72d1ee5537d43/nixos/modules/minecraft/modpacks/default/pack.toml";
-    packHash = "sha256-sVJmWFgATWkX805Wkq3j2R28LR9y6JJwOzRPckyZRBA=";
+    url = "https://raw.githubusercontent.com/md-y/.dotfiles/refs/heads/master/nixos/modules/minecraft/modpacks/default/pack.toml";
+    packHash = "sha256-b+4EfcjNc+c9ktjSO/vIXgXjGM2IAP6/wKsERPQfz/Y=";
   };
 
   lazymcConfig = cfg: pkgs.writeTextFile {
@@ -50,6 +50,12 @@ in
   imports = [ inputs.nix-minecraft.nixosModules.minecraft-servers ];
   nixpkgs.overlays = [ inputs.nix-minecraft.overlay ];
 
+  systemd.services."minecraft-server-default" = {
+    serviceConfig = {
+      RestrictAddressFamilies = lib.mkForce [ "AF_UNIX" "AF_INET" "AF_INET6" "AF_NETLINK" ];
+    };
+  };
+
   services.minecraft-servers = {
     enable = true;
     eula = true;
@@ -76,16 +82,6 @@ in
       enforce-whitelist = true;
       difficulty = "hard";
       level-seed = 3368699220760197849;
-    };
-  };
-
-  services.rathole.settings = {
-    client = {
-      services = {
-        minecraft = {
-          local_addr = "127.0.0.1:25565";
-        };
-      };
     };
   };
 }
