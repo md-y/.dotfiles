@@ -1,0 +1,13 @@
+name = "e4mc"
+filename = "e4mc-fabric-6.1.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/qANg5Jrr/versions/9QMfnrh4/e4mc-fabric-6.1.0.jar"
+hash-format = "sha1"
+hash = "005880b9620a609422ba5ec6d5048a4e5fead820"
+
+[update]
+[update.modrinth]
+mod-id = "qANg5Jrr"
+version = "9QMfnrh4"
