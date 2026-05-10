@@ -26,6 +26,7 @@
     gcc
     tmux
     zip
+    unzip
 
     # General Packages
     nodejs
