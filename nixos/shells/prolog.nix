@@ -6,6 +6,7 @@ pkgs.mkShell {
     ciao
     gprolog
     clingo
+    swi-prolog
   ];
   shellHook = ''
     export CIAOPATH="$PWD/.ciao"
