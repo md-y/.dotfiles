@@ -47,6 +47,7 @@
         modules = [
           ./nixos/configuration.nix
           ./nixos/modules/wsl.nix
+          ./nixos/modules/docker.nix
           ./nixos/modules/minecraft/minecraft.nix
           ./nixos/modules/nvidia.nix
         ];
