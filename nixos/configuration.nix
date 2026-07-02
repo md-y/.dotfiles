@@ -8,7 +8,6 @@
   ];
 
   # General Settings
-  system.stateVersion = "24.11";
   networking.hostName = configName;
   nix.settings = {
     experimental-features = "nix-command flakes";

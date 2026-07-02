@@ -46,6 +46,7 @@
         };
         modules = [
           ./nixos/configuration.nix
+          ./nixos/modules/desktop.nix
           ./nixos/modules/wsl.nix
           ./nixos/modules/docker.nix
           ./nixos/modules/minecraft/minecraft.nix
@@ -60,6 +61,7 @@
         };
         modules = [
           ./nixos/configuration.nix
+          ./nixos/modules/laptop.nix
           ./nixos/modules/wsl.nix
         ];
       };
