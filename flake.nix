@@ -74,6 +74,7 @@
         modules = [
           ./nixos/configuration.nix
           ./nixos/modules/homeserver/configuration.nix
+	  ./nixos/modules/ssh-server.nix
         ];
       };
     };

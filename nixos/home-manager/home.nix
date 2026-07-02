@@ -18,7 +18,7 @@
     extraConfig = {
       credential.helper = [
         "store --file ~/.git-credentials"
-        "oauth"
+        "oauth -device"
       ];
     };
   };
