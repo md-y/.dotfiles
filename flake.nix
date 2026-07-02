@@ -40,7 +40,7 @@
     nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem {
         inherit system;
-	      specialArgs = {
+        specialArgs = {
           inherit inputs outputs;
           configName = "desktop";
         };
@@ -55,7 +55,7 @@
       };
       laptop = nixpkgs.lib.nixosSystem {
         inherit system;
-	      specialArgs = {
+        specialArgs = {
           inherit inputs outputs;
           configName = "laptop";
         };
@@ -63,6 +63,17 @@
           ./nixos/configuration.nix
           ./nixos/modules/laptop.nix
           ./nixos/modules/wsl.nix
+        ];
+      };
+      homeserver = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = {
+          inherit inputs outputs;
+          configName = "homeserver";
+        };
+        modules = [
+          ./nixos/configuration.nix
+          ./nixos/modules/homeserver/configuration.nix
         ];
       };
     };
