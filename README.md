@@ -43,7 +43,6 @@ users.users.sam = {
 ```bash
 git clone https://github.com/md-y/.dotfiles ~/.dotfiles
 ```
-5. Copy or regenerate `hardware-configuration.nix` and place into root of this repo
 5. Rebuild the system using the appropriate host name:
 ```bash
 sudo nixos-rebuild switch --flake ~/.dotfiles#HOSTNAME
