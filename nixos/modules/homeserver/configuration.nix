@@ -4,6 +4,8 @@
   imports =
     [
       ./hardware-configuration.nix
+      ./dns.nix
+      ./frigate.nix
     ];
 
   boot.loader.systemd-boot.enable = true;

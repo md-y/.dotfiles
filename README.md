@@ -47,3 +47,29 @@ git clone https://github.com/md-y/.dotfiles ~/.dotfiles
 ```bash
 sudo nixos-rebuild switch --flake ~/.dotfiles#HOSTNAME
 ```
+
+## Secret Management
+
+Secrets are managed using [agenix](https://github.com/ryantm/agenix).
+
+First, you (the user) need an SSH Key (use default settings):
+```bash
+ssh-keygen -t ed25519
+```
+
+Remember the new key, or access an old one via:
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
+
+To get the key of the host (root), use:
+```bash
+cat /etc/ssh/ssh_host_ed25519_key.pub
+```
+
+Use these public keys inside `nixos/secrets/secrets.nix`. This script is used to declare secrets and who can access them.
+
+To generate the secrets, use this command inside the `secrets` dir:
+```bash
+agenix -e SECRET_NAME.age
+```

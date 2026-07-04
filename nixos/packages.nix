@@ -27,6 +27,7 @@
     tmux
     zip
     unzip
+    inputs.agenix.packages.${pkgs.system}.default
 
     # General Packages
     nodejs

@@ -1,5 +1,5 @@
 {
-  description = "NixOS on WSL";
+  description = "Sam's NixOS";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/release-24.11";
@@ -12,6 +12,8 @@
 
     rust-overlay.url = "github:oxalica/rust-overlay";
 
+    agenix.url = "github:ryantm/agenix";
+
     #### For Modules
 
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
@@ -23,7 +25,7 @@
     nix-minecraft.inputs.flake-compat.follows = "flake-compat";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... } @ inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, agenix, ... } @ inputs:
   let 
     inherit (self) outputs;
     system = "x86_64-linux";
