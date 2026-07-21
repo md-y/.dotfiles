@@ -3,7 +3,7 @@
 let
   defaultModpack = pkgs.fetchPackwizModpack {
     url = "https://raw.githubusercontent.com/md-y/.dotfiles/refs/heads/master/nixos/modules/minecraft/modpacks/default/pack.toml";
-    packHash = "sha256-b+4EfcjNc+c9ktjSO/vIXgXjGM2IAP6/wKsERPQfz/Y=";
+    packHash = "sha256-USlW+oG8rPjHpFf/Dk55sXJGT+w869g5nwjQ+lVOU5I=";
   };
 
   lazymcConfig = cfg: pkgs.writeTextFile {
@@ -70,9 +70,11 @@ in
       "mods" = "${defaultModpack}/mods";
       "lazymc.toml" = lazymcConfig {
         dataDir = "/srv/minecraft/default";
-        mcVersion = "1.20.10";
+        mcVersion = "26.2";
         protocolVersion = 770;
-        package = pkgs.fabricServers.fabric-1_21_10;
+        package = pkgs.fabricServers.fabric-26_2.override {
+          jre_headless = pkgs.openjdk25_headless;
+        };
         jvmOpts = "-Xmx2G -Xms1G";
       };
     };

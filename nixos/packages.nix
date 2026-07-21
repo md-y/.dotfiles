@@ -17,7 +17,6 @@
     # CLI Tools
     neovim
     curl
-    wslu
     zsh
     wget
     tree
