@@ -1,4 +1,4 @@
-{ inputs, lib,config, pkgs, ... }:
+{ inputs, lib, config, pkgs, ... }:
 
 {
   home = {
@@ -32,7 +32,7 @@
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" "virtualenv" ];
-      custom = "$HOME/.dotfiles/zsh";
+      custom = "${config.home.homeDirectory}/.dotfiles/zsh";
       theme = "mdy";
     };
   };

@@ -3,7 +3,7 @@
 let
   defaultModpack = pkgs.fetchPackwizModpack {
     url = "https://raw.githubusercontent.com/md-y/.dotfiles/refs/heads/master/nixos/modules/minecraft/modpacks/default/pack.toml";
-    packHash = "sha256-USlW+oG8rPjHpFf/Dk55sXJGT+w869g5nwjQ+lVOU5I=";
+    packHash = "sha256-huco12rrIUC3FHgLKSCXCheUpHHE6NjQwDyUaDbHXGI=";
   };
 
   lazymcConfig = cfg: pkgs.writeTextFile {
