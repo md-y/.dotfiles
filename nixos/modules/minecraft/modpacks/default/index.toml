@@ -2,40 +2,40 @@ hash-format = "sha256"
 
 [[files]]
 file = "mods/c2me-fabric.pw.toml"
-hash = "94ff21a3cb20199350280ab4a1c1373a85fc641d87d0b7cb41a5b3af3d09e1b9"
+hash = "2f116118304ca8a674ef2e5e42fe5b07e3b9544e5888a0a7695727f6121e57bd"
 metafile = true
 
 [[files]]
 file = "mods/carpet.pw.toml"
-hash = "c6214a3903e034a911d984f84a98ad04fd7a0f76431d16986458ceb782b7d8c1"
+hash = "cf5bc21c0c3b5586245fd9f9700d18f321b0d1484906c7053cc783125f700044"
 metafile = true
 
 [[files]]
 file = "mods/distanthorizons.pw.toml"
-hash = "e4a776a5fc13684e0d9593029f4093f4196c15568ef445c6cdf814096a900f86"
+hash = "fc8e3d3da364a2521d978276a312be2bf61fb1c1c304f775c6d0897cc42b729c"
 metafile = true
 
 [[files]]
 file = "mods/e4mc.pw.toml"
-hash = "d42b8f9a8f5c3a1165be2a4121bb9e9377b581a5edf19df3b043b3b423b50b49"
+hash = "7af0c56d2770989055c073940b7eb1ddb56b60052cadc6bfead38be7cf53a0d8"
 metafile = true
 
 [[files]]
 file = "mods/fabric-api.pw.toml"
-hash = "37d9ea3d529950e4d974ea6d9f918b248b16f46a572289e783b9dd3b730e8be5"
+hash = "ce4f6d9e2cb701832073bd4096bb80fa97fb99ad26ce66520e4989d0291ec5e3"
 metafile = true
 
 [[files]]
 file = "mods/ferrite-core.pw.toml"
-hash = "d74b73efa88a50f20856740f9e69d2ba2e9c7b0a9ddc9a0c1d2792ad10e4c385"
+hash = "85ad2490c50f56b0d942f28e71847e89145f8935df2d2a0c2313ef2b954240c5"
 metafile = true
 
 [[files]]
 file = "mods/lithium.pw.toml"
-hash = "5787b1deb7975af608901df0bf16b1e5de2452c98808f6a205c35aaa83e9f56a"
+hash = "0448271d05db3ac26a3acf52dea159a94c0f09ba5ef4136fe7336d578517278f"
 metafile = true
 
 [[files]]
 file = "mods/servux.pw.toml"
-hash = "c96445fa15b6db93634ae1f4b029e949150b6128466742be0fdc424a686f8881"
+hash = "585bbf67897a2dfb25da72339eb7f9f295f392a2702a2c3db1d71bf6efeedab7"
 metafile = true

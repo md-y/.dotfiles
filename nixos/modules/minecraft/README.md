@@ -1,4 +1,4 @@
-## Updating mMdpack
+## Updating modpack
 
 - Use packwiz (such as through `nix-shell -p packwiz`) to update modpack
 - Commit changes to github
