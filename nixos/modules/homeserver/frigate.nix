@@ -18,12 +18,15 @@
       mqtt.enabled = false;
       ffmpeg = {
         hwaccel_args = "preset-vaapi";
+        output_args = {
+          record = "preset-record-generic-audio-aac";
+        };
       };
       cameras = {
-        tapo_c200 = {
-	  detect = {
-	    enabled = false;
-	  };
+        tapo_c200_1 = {
+          detect = {
+            enabled = false;
+          };
           onvif = {
             host = "192.168.40.168";
             port = 2020;
@@ -38,7 +41,33 @@
               }
             ];
           };
-          
+          record = {
+            enabled = true;
+            retain = {
+              days = 1;
+              mode = "all";
+            };
+          };
+        };
+
+        tapo_c210_2 = {
+          detect = {
+            enabled = false;
+          };
+          onvif = {
+            host = "192.168.40.169";
+            port = 2020;
+            user = "{FRIGATE_TAPO_USER}";
+            password = "{FRIGATE_TAPO_PASSWORD}";
+          };
+          ffmpeg = {
+            inputs = [
+              {
+                path = "rtsp://{FRIGATE_TAPO_USER}:{FRIGATE_TAPO_PASSWORD}@192.168.40.169:554/stream1";
+                roles = [ "record" ];
+              }
+            ];
+          };
           record = {
             enabled = true;
             retain = {
