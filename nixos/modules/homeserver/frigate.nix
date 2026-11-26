@@ -13,6 +13,7 @@
   services.frigate = {
     enable = true;
     hostname = "homeserver.local";
+    checkConfig = false;
 
     settings = {
       mqtt.enabled = false;
